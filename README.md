@@ -29,7 +29,7 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 <!--START_SECTION:waka-->
 
 ```txt
-Total Time: 0 secs
+From: 08 January 2026 - To: 07 February 2026
 
 No activity tracked
 ```
