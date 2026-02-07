@@ -1,11 +1,11 @@
-## Hi I'm Krishna
+## Hey there- I'm Krishna!
 
-I am a software developer. Lover of building product and systems. Currently into spatial computing, C#, and TypeScript.
+I am a high schooler getting into the world of programming. I love building solutions and tools that serve people. Currently into spatial computing, C#, TypeScript, and rapid prototyping.
 
-I build at Visualyze where I spend most of my time shipping immersive workflows. Some projects I've worked on include:
-- A VR-to-BIM edit pipeline for Revit
-- Interaction prototypes for spatial design review
-- Tooling to shorten design-feedback loops
+I'm currently working on a portfolio of ventures where I spend most of my time designing immersive workflows. Some projects I've worked on include:
+- A VR-to-BIM edit pipeline for Revit and Quest VR --> Soon to be a full VR-based AEC tool for 3D roomscale design
+- A study OS tool for nodal mapping of topics on standardized tests
+- Enrollment forecasting algorithms for early learning centers and preschools
 
 ### Technologies
 
