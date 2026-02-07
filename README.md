@@ -27,4 +27,11 @@ I build at Visualyze where I spend most of my time shipping immersive workflows.
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
+
+```txt
+Total Time: 0 secs
+
+No activity tracked
+```
+
 <!--END_SECTION:waka-->
