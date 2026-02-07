@@ -3,7 +3,7 @@
 I am a high schooler getting into the world of programming. I love building solutions and tools that serve people. Currently into spatial computing, C#, TypeScript, and rapid prototyping.
 
 I'm currently working on a portfolio of ventures where I spend most of my time designing immersive workflows. Some projects I've worked on include:
-- A VR-to-BIM edit pipeline for Revit and Quest vr --> Soon to be a full VR-based AEC engineering tool
+- A VR-to-BIM edit pipeline for Revit and Quest VR --> Soon to be a full VR-based AEC tool for 3D roomscale design
 - A study OS tool for nodal mapping of topics on standardized tests
 - Enrollment forecasting algorithms for early learning centers and preschools
 
