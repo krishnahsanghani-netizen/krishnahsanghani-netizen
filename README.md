@@ -6,6 +6,7 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 - A VR-to-BIM edit pipeline for Revit and Quest VR --> Soon to be a full VR-based AEC tool for 3D roomscale design
 - A study OS tool for nodal mapping of topics on standardized tests
 - Enrollment forecasting algorithms for early learning centers and preschools
+- A comprehensive Monte Carlo Simulation designed for projecting and simulating startup successes and runway
 
 ### Technologies
 
