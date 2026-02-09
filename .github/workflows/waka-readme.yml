@@ -37,13 +37,64 @@ jobs:
 
           end_date="$(date -u +%Y-%m-%d)"
           start_date="$(date -u -d '6 days ago' +%Y-%m-%d)"
-          total_seconds="$(curl -s -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/summaries?start=${start_date}&end=${end_date}" | jq -r '.cumulative_total.seconds // 0')"
+          summary_json="$(curl -s -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/summaries?start=${start_date}&end=${end_date}")"
+          total_seconds="$(echo "$summary_json" | jq -r '.cumulative_total.seconds // 0')"
           hours="$(awk -v s="$total_seconds" 'BEGIN { printf "%.1f", s/3600 }')"
           weekly_line="This week I spent ${hours} hours coding"
 
           awk -v replacement="$weekly_line" '
             /<!--START_SECTION:waka-week-->/ { print; print replacement; in_block=1; next }
             /<!--END_SECTION:waka-week-->/ { in_block=0; print; next }
+            !in_block { print }
+          ' README.md > README.md.tmp
+          mv README.md.tmp README.md
+
+          project_rows="$(echo "$summary_json" | jq -r '
+            [ .data[]?.projects[]? ]
+            | group_by(.name)
+            | map({
+                name: .[0].name,
+                total_seconds: (map(.total_seconds) | add)
+              })
+            | sort_by(-.total_seconds)
+            | .[0:7]
+            | .[] | @base64
+          ')"
+
+          if [ -n "$project_rows" ]; then
+            project_total="$(echo "$summary_json" | jq -r '
+              [ .data[]?.projects[]?.total_seconds ] | add // 0
+            ')"
+            pie_block='```mermaid
+pie showData'
+            while IFS= read -r row; do
+              [ -z "$row" ] && continue
+              _jq() { echo "$row" | base64 --decode | jq -r "$1"; }
+              name="$(_jq '.name')"
+              secs="$(_jq '.total_seconds')"
+              percent="$(awk -v s="$secs" -v t="$project_total" 'BEGIN { if (t <= 0) print "0.0"; else printf "%.2f", (s*100)/t }')"
+              hhmm="$(awk -v s="$secs" 'BEGIN { h=int(s/3600); m=int((s-h*3600)/60); if (h>0) printf "%d:%02d", h, m; else printf "0:%02d", m }')"
+              pie_block="${pie_block}
+    \"${name} (${hhmm})\" : ${percent}"
+            done <<< "$project_rows"
+            pie_block="${pie_block}
+```"
+          else
+            pie_block='```mermaid
+pie showData
+    "No project data this week" : 100
+```'
+          fi
+
+          awk -v replacement="$pie_block" '
+            BEGIN { n = split(replacement, lines, /\n/) }
+            /<!--START_SECTION:waka-project-pie-->/ {
+              print
+              for (i = 1; i <= n; i++) print lines[i]
+              in_block=1
+              next
+            }
+            /<!--END_SECTION:waka-project-pie-->/ { in_block=0; print; next }
             !in_block { print }
           ' README.md > README.md.tmp
           mv README.md.tmp README.md

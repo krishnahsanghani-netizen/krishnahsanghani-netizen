@@ -44,3 +44,12 @@ JSON                           █░░░░░░░░░░░░░░░�
 <!--START_SECTION:waka-week-->
 This week I spent 6.2 hours coding
 <!--END_SECTION:waka-week-->
+
+### Weekly Project Split (Pie)
+
+<!--START_SECTION:waka-project-pie-->
+```mermaid
+pie showData
+    "No data yet" : 100
+```
+<!--END_SECTION:waka-project-pie-->
