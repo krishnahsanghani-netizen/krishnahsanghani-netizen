@@ -71,9 +71,9 @@ jobs:
             pie_block="```mermaid"$'\n'"pie showData"
             while IFS= read -r row; do
               [ -z "$row" ] && continue
-              _jq() { echo "$row" | base64 --decode | jq -r "$1"; }
-              name="$(_jq '.name')"
-              secs="$(_jq '.total_seconds')"
+              decoded="$(echo "$row" | base64 --decode)"
+              name="$(echo "$decoded" | jq -r '.name')"
+              secs="$(echo "$decoded" | jq -r '.total_seconds')"
               percent="$(awk -v s="$secs" -v t="$project_total" 'BEGIN { if (t <= 0) print "0.0"; else printf "%.2f", (s*100)/t }')"
               hhmm="$(awk -v s="$secs" 'BEGIN { h=int(s/3600); m=int((s-h*3600)/60); if (h>0) printf "%d:%02d", h, m; else printf "0:%02d", m }')"
               pie_block="${pie_block}"$'\n'"    \"${name} (${hhmm})\" : ${percent}"
