@@ -27,14 +27,7 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 
 ### This month I have been doing:
 
-<!--START_SECTION:waka-->
-
-```txt
 From: 09 January 2026 - To: 08 February 2026
 
-sh                           ███████████████▓░░░░░░░░░   62.54 %
-TypeScript                   █████████░░░░░░░░░░░░░░░░   36.64 %
-Markdown                     ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.82 %
-```
-
+<!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
