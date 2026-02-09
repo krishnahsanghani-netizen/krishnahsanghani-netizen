@@ -40,3 +40,7 @@ JSON                           █░░░░░░░░░░░░░░░�
 ```
 
 <!--END_SECTION:waka-->
+
+<!--START_SECTION:waka-week-->
+This week I spent 0.0 hours coding
+<!--END_SECTION:waka-week-->

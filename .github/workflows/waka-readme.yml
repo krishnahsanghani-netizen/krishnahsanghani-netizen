@@ -20,3 +20,41 @@ jobs:
           SHOW_TITLE: false
           SHOW_TIME: false
           TIME_RANGE: all_time
+
+  update-weekly-total:
+    name: Update Weekly Coding Total
+    runs-on: ubuntu-latest
+    needs: update-readme
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Update weekly total line
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: |
+          set -euo pipefail
+
+          total_seconds="$(curl -s -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/stats/last_7_days" | jq -r '.data.total_seconds // 0')"
+          hours="$(awk -v s="$total_seconds" 'BEGIN { printf "%.1f", s/3600 }')"
+          weekly_line="This week I spent ${hours} hours coding"
+
+          awk -v replacement="$weekly_line" '
+            /<!--START_SECTION:waka-week-->/ { print; print replacement; in_block=1; next }
+            /<!--END_SECTION:waka-week-->/ { in_block=0; print; next }
+            !in_block { print }
+          ' README.md > README.md.tmp
+          mv README.md.tmp README.md
+
+      - name: Commit weekly total update
+        run: |
+          set -euo pipefail
+          if git diff --quiet README.md; then
+            echo "No weekly total changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update weekly coding total"
+          git push origin main
