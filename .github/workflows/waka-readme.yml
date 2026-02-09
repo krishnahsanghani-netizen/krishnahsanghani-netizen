@@ -70,7 +70,8 @@ jobs:
               [ .data[]?.projects[]?.total_seconds ] | add // 0
             ')"
             pie_block="```mermaid"$'\n'"pie showData"
-            while IFS=$'\t' read -r name secs || [ -n "${name:-}" ]; do
+            set +u
+            while IFS=$'\t' read -r name secs; do
               [ -z "${name:-}" ] && continue
               secs="${secs:-0}"
               if ! [[ "$secs" =~ ^[0-9]+([.][0-9]+)?$ ]]; then
@@ -80,6 +81,7 @@ jobs:
               hhmm="$(awk -v s="$secs" 'BEGIN { h=int(s/3600); m=int((s-h*3600)/60); if (h>0) printf "%d:%02d", h, m; else printf "0:%02d", m }')"
               pie_block="${pie_block}"$'\n'"    \"${name} (${hhmm})\" : ${percent}"
             done <<< "$project_tsv"
+            set -u
             pie_block="${pie_block}"$'\n'"```"
           else
             pie_block="```mermaid"$'\n'"pie showData"$'\n'"    \"No project data this week\" : 100"$'\n'"```"
