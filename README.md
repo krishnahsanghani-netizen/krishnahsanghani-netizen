@@ -42,9 +42,9 @@ JSON                           █░░░░░░░░░░░░░░░�
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 6.4 hours coding
+### This week I spent 6.5 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-![Weekly project split pie chart](https://quickchart.io/chart?c=%7Btype%3A%27pie%27%2Cdata%3A%7Blabels%3A%5B%27No%20data%27%5D%2Cdatasets%3A%5B%7Bdata%3A%5B100%5D%7D%5D%7D%7D)
+![Weekly project split pie chart](https://quickchart.io/chart?c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22montecarlo-startup-runway%22%2C%22visualyze-core%22%2C%22github%20profile%22%2C%22Portfolio%22%2C%22Terminal%22%2C%22monte-carlo-simulation%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B10880.790309%2C9571.715688%2C1592.205291%2C647.203584%2C559.574776%2C272.975074%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%7D%7D%7D)
 <!--END_SECTION:waka-project-pie-->
