@@ -1,6 +1,6 @@
 name: Waka Readme
 
-on:
+"on":
   push:
     branches:
       - main
