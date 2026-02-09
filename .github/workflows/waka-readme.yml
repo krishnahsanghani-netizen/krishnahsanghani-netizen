@@ -71,7 +71,8 @@ jobs:
                   },
                   options: {
                     plugins: {
-                      legend: { position: "bottom" }
+                      legend: { position: "bottom" },
+                      datalabels: { display: false }
                     }
                   }
                 }
