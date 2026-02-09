@@ -35,7 +35,9 @@ jobs:
         run: |
           set -euo pipefail
 
-          total_seconds="$(curl -s -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/stats/last_7_days" | jq -r '.data.total_seconds // 0')"
+          end_date="$(date -u +%Y-%m-%d)"
+          start_date="$(date -u -d '6 days ago' +%Y-%m-%d)"
+          total_seconds="$(curl -s -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/summaries?start=${start_date}&end=${end_date}" | jq -r '.cumulative_total.seconds // 0')"
           hours="$(awk -v s="$total_seconds" 'BEGIN { printf "%.1f", s/3600 }')"
           weekly_line="This week I spent ${hours} hours coding"
 
