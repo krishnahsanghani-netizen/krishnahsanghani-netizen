@@ -68,8 +68,7 @@ jobs:
             project_total="$(echo "$summary_json" | jq -r '
               [ .data[]?.projects[]?.total_seconds ] | add // 0
             ')"
-            pie_block='```mermaid
-pie showData'
+            pie_block="```mermaid"$'\n'"pie showData"
             while IFS= read -r row; do
               [ -z "$row" ] && continue
               _jq() { echo "$row" | base64 --decode | jq -r "$1"; }
@@ -77,16 +76,11 @@ pie showData'
               secs="$(_jq '.total_seconds')"
               percent="$(awk -v s="$secs" -v t="$project_total" 'BEGIN { if (t <= 0) print "0.0"; else printf "%.2f", (s*100)/t }')"
               hhmm="$(awk -v s="$secs" 'BEGIN { h=int(s/3600); m=int((s-h*3600)/60); if (h>0) printf "%d:%02d", h, m; else printf "0:%02d", m }')"
-              pie_block="${pie_block}
-    \"${name} (${hhmm})\" : ${percent}"
+              pie_block="${pie_block}"$'\n'"    \"${name} (${hhmm})\" : ${percent}"
             done <<< "$project_rows"
-            pie_block="${pie_block}
-```"
+            pie_block="${pie_block}"$'\n'"```"
           else
-            pie_block='```mermaid
-pie showData
-    "No project data this week" : 100
-```'
+            pie_block="```mermaid"$'\n'"pie showData"$'\n'"    \"No project data this week\" : 100"$'\n'"```"
           fi
 
           awk -v replacement="$pie_block" '
