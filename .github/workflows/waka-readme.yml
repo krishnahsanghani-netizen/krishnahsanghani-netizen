@@ -65,20 +65,29 @@ jobs:
           ')"
 
           if [ -n "$project_rows" ]; then
-            project_total="$(echo "$summary_json" | jq -r '
-              [ .data[]?.projects[]?.total_seconds ] | add // 0
-            ')"
-            pie_block="```mermaid"$'\n'"pie showData"
-            while IFS= read -r row; do
-              [ -z "$row" ] && continue
-              decoded="$(echo "$row" | base64 --decode)"
-              name="$(echo "$decoded" | jq -r '.name')"
-              secs="$(echo "$decoded" | jq -r '.total_seconds')"
-              percent="$(awk -v s="$secs" -v t="$project_total" 'BEGIN { if (t <= 0) print "0.0"; else printf "%.2f", (s*100)/t }')"
-              hhmm="$(awk -v s="$secs" 'BEGIN { h=int(s/3600); m=int((s-h*3600)/60); if (h>0) printf "%d:%02d", h, m; else printf "0:%02d", m }')"
-              pie_block="${pie_block}"$'\n'"    \"${name} (${hhmm})\" : ${percent}"
-            done <<< "$project_rows"
-            pie_block="${pie_block}"$'\n'"```"
+            pie_lines="$(echo "$summary_json" | jq -r '
+              [ .data[]?.projects[]? ]
+              | group_by(.name)
+              | map({ name: .[0].name, total_seconds: (map(.total_seconds) | add) })
+              | sort_by(-.total_seconds)
+              | .[0:7] as $rows
+              | ($rows | map(.total_seconds) | add // 0) as $total
+              | if $total == 0 then
+                  empty
+                else
+                  $rows[]
+                  | . as $p
+                  | ($p.total_seconds / 3600 | floor) as $h
+                  | (($p.total_seconds - ($h * 3600)) / 60 | floor) as $m
+                  | ($p.total_seconds * 100 / $total) as $pct
+                  | "    \"\($p.name) (\($h):\(($m | tostring | if length == 1 then \"0\" + . else . end)) )\" : \($pct)"
+                end
+            ' | sed 's/ )/)/g')"
+            if [ -n "$pie_lines" ]; then
+              pie_block="```mermaid"$'\n'"pie showData"$'\n'"$pie_lines"$'\n'"```"
+            else
+              pie_block="```mermaid"$'\n'"pie showData"$'\n'"    \"No project data this week\" : 100"$'\n'"```"
+            fi
           else
             pie_block="```mermaid"$'\n'"pie showData"$'\n'"    \"No project data this week\" : 100"$'\n'"```"
           fi
