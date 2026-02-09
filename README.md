@@ -42,19 +42,9 @@ JSON                           █░░░░░░░░░░░░░░░�
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-This week I spent 6.4 hours coding
+### This week I spent 6.4 hours coding
 <!--END_SECTION:waka-week-->
 
-### Weekly Project Split (Pie)
-
 <!--START_SECTION:waka-project-pie-->
-```mermaid
-pie showData
-    "montecarlo-startup-runway (3:01)" : 47.166701674402844
-    "visualyze-core (2:39)" : 41.49204658366306
-    "github profile (0:18)" : 4.92672790762947
-    "Portfolio (0:10)" : 2.8055368683911217
-    "Terminal (0:09)" : 2.425678261833766
-    "monte-carlo-simulation (0:04)" : 1.183308704079727
-```
+![Weekly project split pie chart](https://quickchart.io/chart?c=%7Btype%3A%27pie%27%2Cdata%3A%7Blabels%3A%5B%27No%20data%27%5D%2Cdatasets%3A%5B%7Bdata%3A%5B100%5D%7D%5D%7D%7D)
 <!--END_SECTION:waka-project-pie-->

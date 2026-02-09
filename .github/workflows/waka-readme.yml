@@ -43,7 +43,7 @@ jobs:
           summary_json="$(curl -s -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/summaries?start=${start_date}&end=${end_date}")"
           total_seconds="$(echo "$summary_json" | jq -r '.cumulative_total.seconds // 0')"
           hours="$(awk -v s="$total_seconds" 'BEGIN { printf "%.1f", s/3600 }')"
-          weekly_line="This week I spent ${hours} hours coding"
+          weekly_line="### This week I spent ${hours} hours coding"
 
           awk -v replacement="$weekly_line" '
             /<!--START_SECTION:waka-week-->/ { print; print replacement; in_block=1; next }
@@ -52,34 +52,44 @@ jobs:
           ' README.md > README.md.tmp
           mv README.md.tmp README.md
 
-          pie_block="$(echo "$summary_json" | jq -r '
+          chart_config="$(echo "$summary_json" | jq -c '
             [ .data[]?.projects[]? ]
             | group_by(.name)
             | map({ name: .[0].name, total_seconds: (map(.total_seconds) | add) })
             | sort_by(-.total_seconds)
             | .[0:7] as $rows
-            | ($rows | map(.total_seconds) | add // 0) as $total
-            | if $total == 0 then
-                "```mermaid\npie showData\n    \"No project data this week\" : 100\n```"
+            | if ($rows | length) == 0 then
+                empty
               else
-                "```mermaid\npie showData\n"
-                + (
-                    $rows
-                    | map(
-                        "    \""
-                        + .name
-                        + " ("
-                        + ((.total_seconds / 3600 | floor) | tostring)
-                        + ":"
-                        + ((((.total_seconds % 3600) / 60 | floor) | tostring) | if length == 1 then "0" + . else . end)
-                        + ")\" : "
-                        + (((.total_seconds * 100) / $total) | tostring)
-                      )
-                    | join("\n")
-                  )
-                + "\n```"
+                {
+                  type: "pie",
+                  data: {
+                    labels: ($rows | map(.name)),
+                    datasets: [
+                      { data: ($rows | map(.total_seconds)) }
+                    ]
+                  },
+                  options: {
+                    plugins: {
+                      legend: { position: "bottom" }
+                    }
+                  }
+                }
               end
           ')"
+
+          if [ -n "$chart_config" ]; then
+            chart_url="$(CHART_CONFIG="$chart_config" python3 - <<'PY'
+import os
+import urllib.parse
+cfg = os.environ["CHART_CONFIG"]
+print("https://quickchart.io/chart?c=" + urllib.parse.quote(cfg, safe=""))
+PY
+)"
+            pie_block="![Weekly project split pie chart](${chart_url})"
+          else
+            pie_block="No project data this week."
+          fi
 
           awk -v replacement="$pie_block" '
             BEGIN { n = split(replacement, lines, /\n/) }
