@@ -80,8 +80,8 @@ jobs:
           ')"
 
           if [ -n "$chart_config" ]; then
-            chart_url="$(CHART_CONFIG="$chart_config" python3 -c 'import os, urllib.parse; print("https://quickchart.io/chart?width=300&height=180&c=" + urllib.parse.quote(os.environ["CHART_CONFIG"], safe=""))')"
-            pie_block="<img src=\"${chart_url}\" alt=\"Weekly project split pie chart\" width=\"180\" />"
+            chart_url="$(CHART_CONFIG="$chart_config" python3 -c 'import os, urllib.parse; print("https://quickchart.io/chart?width=900&height=540&c=" + urllib.parse.quote(os.environ["CHART_CONFIG"], safe=""))')"
+            pie_block="<img src=\"${chart_url}\" alt=\"Weekly project split pie chart\" width=\"540\" />"
           else
             pie_block="No project data this week."
           fi
