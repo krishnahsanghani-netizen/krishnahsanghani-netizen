@@ -1,21 +1,26 @@
-  name: Waka Readme
+name: Waka Readme
 
-  on:
-    schedule:
-      - cron: "0 6 * * *"
-    workflow_dispatch:
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
 
-  jobs:
-    update-readme:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: athul/waka-readme@v0.3.1
-          with:
-            WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-            TIME_RANGE: last_30_days
-            SHOW_TITLE: true
-            SHOW_TIME: false
-            SHOW_TOTAL: false
-            SHOW_MASKED_TIME: false
-            LANG_COUNT: 6
-            BLOCKS: "█░"
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: WakaReadme DevMetrics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: athul/waka-readme@master
+        with:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          SHOW_TITLE: true
+          SHOW_TIME: false
+          SHOW_TOTAL: false
+          SHOW_MASKED_TIME: false
+          TIME_RANGE: last_30_days
+          LANG_COUNT: 6
+          BLOCKS: "█▓░"

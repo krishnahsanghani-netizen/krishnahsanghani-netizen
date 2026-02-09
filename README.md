@@ -24,3 +24,8 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://krishnasanghani.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishnahsanghani/)
+
+### Coding Activity (Last 30 Days)
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
