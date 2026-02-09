@@ -30,4 +30,13 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 From: 09 January 2026 - To: 08 February 2026
 
 <!--START_SECTION:waka-->
+
+```txt
+TypeScript                     ████████▒░░░░░░░░░░░░░░░░   33.98 %
+Markdown                       ███████░░░░░░░░░░░░░░░░░░   27.87 %
+C#                             ██▓░░░░░░░░░░░░░░░░░░░░░░   10.52 %
+sh                             █▓░░░░░░░░░░░░░░░░░░░░░░░   06.52 %
+JSON                           █░░░░░░░░░░░░░░░░░░░░░░░░   04.14 %
+```
+
 <!--END_SECTION:waka-->
