@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   update-readme:
-    name: WakaReadme DevMetrics
+    name: Update this repo's README
     runs-on: ubuntu-latest
     steps:
       - uses: athul/waka-readme@master
@@ -19,8 +19,4 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           SHOW_TITLE: true
           SHOW_TIME: false
-          SHOW_TOTAL: false
-          SHOW_MASKED_TIME: false
           TIME_RANGE: last_30_days
-          LANG_COUNT: 6
-          BLOCKS: "█▓░"
