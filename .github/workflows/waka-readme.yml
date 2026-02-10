@@ -16,98 +16,119 @@ jobs:
     name: Update this repo's README
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
-        with:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          SHOW_TITLE: false
-          SHOW_TIME: false
-          TIME_RANGE: all_time
-
-  update-weekly-total:
-    name: Update Weekly Coding Total
-    runs-on: ubuntu-latest
-    needs: update-readme
-    steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Update weekly total line
+      - name: Update Waka sections from summaries API
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
           set -euo pipefail
 
           end_date="$(date -u +%Y-%m-%d)"
-          start_date="$(date -u -d '6 days ago' +%Y-%m-%d)"
-          summary_json="$(curl -s -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/summaries?start=${start_date}&end=${end_date}")"
-          total_seconds="$(echo "$summary_json" | jq -r '.cumulative_total.seconds // 0')"
-          hours="$(awk -v s="$total_seconds" 'BEGIN { printf "%.1f", s/3600 }')"
-          weekly_line="### This week I spent ${hours} hours coding"
+          start_30="$(date -u -d '29 days ago' +%Y-%m-%d)"
+          start_7="$(date -u -d '6 days ago' +%Y-%m-%d)"
+          curl -fsS -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/summaries?start=${start_30}&end=${end_date}" > /tmp/waka_30.json
+          curl -fsS -u "${WAKATIME_API_KEY}:" "https://wakatime.com/api/v1/users/current/summaries?start=${start_7}&end=${end_date}" > /tmp/waka_7.json
 
-          awk -v replacement="$weekly_line" '
-            /<!--START_SECTION:waka-week-->/ { print; print replacement; in_block=1; next }
-            /<!--END_SECTION:waka-week-->/ { in_block=0; print; next }
-            !in_block { print }
-          ' README.md > README.md.tmp
-          mv README.md.tmp README.md
+          python3 - <<'PY'
+          import json
+          from collections import Counter
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+          from urllib.parse import quote
 
-          chart_config="$(echo "$summary_json" | jq -c '
-            [ .data[]?.projects[]? ]
-            | group_by(.name)
-            | map({ name: .[0].name, total_seconds: (map(.total_seconds) | add) })
-            | sort_by(-.total_seconds)
-            | .[0:7] as $rows
-            | if ($rows | length) == 0 then
-                empty
-              else
-                {
-                  type: "pie",
-                  data: {
-                    labels: ($rows | map(.name)),
-                    datasets: [
-                      { data: ($rows | map(.total_seconds)) }
-                    ]
+          readme_path = Path("README.md")
+          readme = readme_path.read_text()
+          summary_30 = json.loads(Path("/tmp/waka_30.json").read_text())
+          summary_7 = json.loads(Path("/tmp/waka_7.json").read_text())
+
+          def replace_block(text: str, start_marker: str, end_marker: str, body: str) -> str:
+              start = text.find(start_marker)
+              end = text.find(end_marker)
+              if start == -1 or end == -1 or end < start:
+                  raise RuntimeError(f"Missing marker block: {start_marker} ... {end_marker}")
+              insert_at = start + len(start_marker)
+              body = body.strip("\n")
+              return text[:insert_at] + "\n" + body + "\n" + text[end:]
+
+          lang_totals = Counter()
+          for day in summary_30.get("data", []):
+              for lang in day.get("languages", []) or []:
+                  name = lang.get("name")
+                  seconds = float(lang.get("total_seconds") or 0)
+                  if name:
+                      lang_totals[name] += seconds
+
+          total_lang_seconds = sum(lang_totals.values())
+          top_langs = lang_totals.most_common(5)
+          width = 25
+          lines = []
+          for name, seconds in top_langs:
+              pct = (seconds / total_lang_seconds * 100.0) if total_lang_seconds else 0.0
+              filled = max(0, min(width, int(round((pct / 100.0) * width))))
+              bar = "#" * filled + "-" * (width - filled)
+              lines.append(f"{name:<30} {bar} {pct:6.2f} %")
+
+          if not lines:
+              lines = ["No language data in selected range."]
+
+          end_date = datetime.now(timezone.utc).date()
+          start_date = end_date - timedelta(days=29)
+          waka_body = (
+              f"From: {start_date.strftime('%d %B %Y')} - To: {end_date.strftime('%d %B %Y')}\n\n"
+              "```txt\n"
+              + "\n".join(lines)
+              + "\n```"
+          )
+
+          weekly_seconds = float(summary_7.get("cumulative_total", {}).get("seconds") or 0)
+          weekly_hours = weekly_seconds / 3600.0
+          weekly_line = f"### This week I spent {weekly_hours:.1f} hours coding"
+
+          project_totals = Counter()
+          for day in summary_7.get("data", []):
+              for project in day.get("projects", []) or []:
+                  name = project.get("name")
+                  seconds = float(project.get("total_seconds") or 0)
+                  if name:
+                      project_totals[name] += seconds
+          top_projects = project_totals.most_common(7)
+          if top_projects:
+              chart_config = {
+                  "type": "pie",
+                  "data": {
+                      "labels": [name for name, _ in top_projects],
+                      "datasets": [{"data": [seconds for _, seconds in top_projects]}],
                   },
-                  options: {
-                    plugins: {
-                      legend: { position: "bottom" },
-                      datalabels: { display: false }
-                    }
-                  }
-                }
-              end
-          ')"
+                  "options": {
+                      "plugins": {
+                          "legend": {"position": "bottom"},
+                          "datalabels": {"display": False},
+                      }
+                  },
+              }
+              encoded = quote(json.dumps(chart_config, separators=(",", ":")), safe="")
+              pie_block = f'<img src="https://quickchart.io/chart?width=900&height=540&c={encoded}" alt="Weekly project split pie chart" width="540" />'
+          else:
+              pie_block = "No project data this week."
 
-          if [ -n "$chart_config" ]; then
-            chart_url="$(CHART_CONFIG="$chart_config" python3 -c 'import os, urllib.parse; print("https://quickchart.io/chart?width=900&height=540&c=" + urllib.parse.quote(os.environ["CHART_CONFIG"], safe=""))')"
-            pie_block="<img src=\"${chart_url}\" alt=\"Weekly project split pie chart\" width=\"540\" />"
-          else
-            pie_block="No project data this week."
-          fi
+          readme = replace_block(readme, "<!--START_SECTION:waka-->", "<!--END_SECTION:waka-->", waka_body)
+          readme = replace_block(readme, "<!--START_SECTION:waka-week-->", "<!--END_SECTION:waka-week-->", weekly_line)
+          readme = replace_block(readme, "<!--START_SECTION:waka-project-pie-->", "<!--END_SECTION:waka-project-pie-->", pie_block)
 
-          awk -v replacement="$pie_block" '
-            BEGIN { n = split(replacement, lines, /\n/) }
-            /<!--START_SECTION:waka-project-pie-->/ {
-              print
-              for (i = 1; i <= n; i++) print lines[i]
-              in_block=1
-              next
-            }
-            /<!--END_SECTION:waka-project-pie-->/ { in_block=0; print; next }
-            !in_block { print }
-          ' README.md > README.md.tmp
-          mv README.md.tmp README.md
+          readme_path.write_text(readme)
+          PY
 
-      - name: Commit weekly total update
+      - name: Commit README updates
         run: |
           set -euo pipefail
           if git diff --quiet README.md; then
-            echo "No weekly total changes."
+            echo "No README changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Update weekly coding total"
+          git commit -m "Update WakaTime README sections"
           git push origin main
