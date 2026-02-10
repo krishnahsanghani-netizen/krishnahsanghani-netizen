@@ -33,18 +33,18 @@ From: 09 January 2026 - To: 08 February 2026
 From: 12 January 2026 - To: 10 February 2026
 
 ```txt
-Markdown                       #######------------------  27.84 %
-TypeScript                     ######-------------------  24.94 %
-C#                             ###----------------------  10.54 %
-Python                         ##-----------------------   7.88 %
-YAML                           ##-----------------------   7.71 %
+Markdown                       #######------------------  26.42 %
+TypeScript                     ######-------------------  23.66 %
+Python                         ###----------------------  10.27 %
+C#                             ##-----------------------  10.00 %
+YAML                           ##-----------------------   7.76 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 7.7 hours coding
+### This week I spent 8.1 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22montecarlo-startup-runway%22%2C%22visualyze-core%22%2C%22github%20profile%22%2C%22CDar%20Model%20Megaproject%22%2C%22epsilon%20node-hierarchy%20algorithm%22%2C%22Portfolio%22%2C%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B10880.790309%2C9571.715688%2C3127.709522%2C1902.273837%2C759.669406%2C647.203584%2C559.574776%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22montecarlo-startup-runway%22%2C%22visualyze-core%22%2C%22CDar%20Model%20Megaproject%22%2C%22github%20profile%22%2C%22epsilon%20node-hierarchy%20algorithm%22%2C%22Portfolio%22%2C%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B10880.790309%2C9571.715688%2C3281.360557%2C3258.7581%2C759.669406%2C647.203584%2C559.574776%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
