@@ -31,12 +31,12 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 From: 09 January 2026 - To: 08 February 2026
 
 <!--START_SECTION:waka-->
-From: 24 January 2026 - To: 22 February 2026
+From: 25 January 2026 - To: 23 February 2026
 
 ```txt
-Markdown                       ######-------------------  24.09 %
-TypeScript                     #####--------------------  21.61 %
-sh                             ####---------------------  14.11 %
+Markdown                       ######-------------------  24.07 %
+TypeScript                     #####--------------------  21.60 %
+sh                             ####---------------------  14.16 %
 Python                         ##-----------------------   9.52 %
 C#                             ##-----------------------   9.11 %
 ```
@@ -47,5 +47,5 @@ C#                             ##-----------------------   9.11 %
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22002%22%2C%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B26.585524%2C0.0%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B19.220024%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
