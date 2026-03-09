@@ -31,21 +31,21 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 From: 09 January 2026 - To: 08 February 2026
 
 <!--START_SECTION:waka-->
-From: 07 February 2026 - To: 08 March 2026
+From: 08 February 2026 - To: 09 March 2026
 
 ```txt
-Markdown                       ######-------------------  23.84 %
-TypeScript                     #####--------------------  21.40 %
-sh                             ####---------------------  14.98 %
-Python                         ##-----------------------   9.43 %
-C#                             ##-----------------------   9.02 %
+sh                             ######-------------------  24.72 %
+Markdown                       #####--------------------  19.48 %
+Python                         ####---------------------  15.74 %
+TypeScript                     ###----------------------  12.46 %
+YAML                           ###----------------------  10.88 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 0.1 hours coding
+### This week I spent 0.4 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Terminal%22%2C%22001%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B260.745721%2C0.0%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Terminal%22%2C%22002%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B1102.5941599999999%2C321.189361%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
