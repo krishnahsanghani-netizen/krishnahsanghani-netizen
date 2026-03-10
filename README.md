@@ -31,14 +31,14 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 From: 09 January 2026 - To: 08 February 2026
 
 <!--START_SECTION:waka-->
-From: 08 February 2026 - To: 09 March 2026
+From: 09 February 2026 - To: 10 March 2026
 
 ```txt
-sh                             ######-------------------  24.72 %
-Markdown                       #####--------------------  19.48 %
-Python                         ####---------------------  15.74 %
-TypeScript                     ###----------------------  12.46 %
-YAML                           ###----------------------  10.88 %
+sh                             #############------------  52.17 %
+Python                         #########----------------  35.07 %
+Markdown                       #------------------------   5.50 %
+TypeScript                     #------------------------   3.58 %
+YAML                           -------------------------   1.53 %
 ```
 <!--END_SECTION:waka-->
 
