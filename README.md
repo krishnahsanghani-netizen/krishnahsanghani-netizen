@@ -32,18 +32,18 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 From: 10 February 2026 - To: 11 March 2026
 
 ```txt
-TypeScript                     #################--------  66.70 %
-sh                             #######------------------  27.18 %
-HTML                           #------------------------   2.11 %
-Markdown                       #------------------------   2.01 %
-JavaScript                     -------------------------   1.82 %
+TypeScript                     #################--------  66.75 %
+sh                             ######-------------------  25.25 %
+TSConfig                       #------------------------   3.27 %
+HTML                           -------------------------   1.63 %
+Markdown                       -------------------------   1.55 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 1.2 hours coding
+### This week I spent 1.5 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22002%22%2C%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B3120.645482%2C1102.5941599999999%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22002%22%2C%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B4441.891482%2C1102.5941599999999%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
