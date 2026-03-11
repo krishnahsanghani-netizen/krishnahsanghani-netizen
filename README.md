@@ -28,8 +28,6 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 
 ### This month I have been doing:
 
-From: 09 January 2026 - To: 08 February 2026
-
 <!--START_SECTION:waka-->
 From: 10 February 2026 - To: 11 March 2026
 
