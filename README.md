@@ -34,18 +34,18 @@ From: 09 January 2026 - To: 08 February 2026
 From: 10 February 2026 - To: 11 March 2026
 
 ```txt
-sh                             ##################-------  71.66 %
-TypeScript                     ####---------------------  17.51 %
-HTML                           #------------------------   5.57 %
-JavaScript                     #------------------------   4.80 %
-JSON                           -------------------------   0.39 %
+TypeScript                     ###############----------  59.67 %
+sh                             ########-----------------  30.35 %
+YAML                           #------------------------   3.17 %
+HTML                           #------------------------   2.36 %
+Markdown                       #------------------------   2.24 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 0.4 hours coding
+### This week I spent 1.0 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Terminal%22%2C%22002%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B1102.5941599999999%2C321.189361%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22002%22%2C%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B2650.023361%2C1102.5941599999999%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
