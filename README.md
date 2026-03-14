@@ -29,21 +29,21 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 12 February 2026 - To: 13 March 2026
+From: 13 February 2026 - To: 14 March 2026
 
 ```txt
-TypeScript                     #################--------  66.91 %
-sh                             ######-------------------  25.23 %
-TSConfig                       #------------------------   3.28 %
-HTML                           -------------------------   1.64 %
-Markdown                       -------------------------   1.54 %
+TypeScript                     ########-----------------  33.17 %
+Markdown                       ######-------------------  24.07 %
+sh                             ######-------------------  22.06 %
+C#                             ###----------------------  10.02 %
+JSON                           #------------------------   5.19 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 1.5 hours coding
+### This week I spent 3.2 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22002%22%2C%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B4441.891482%2C811.071481%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22002%22%2C%22Terminal%22%2C%22visualyze-mvp%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B5268.388406%2C4661.022503%2C1339.556724%2C399.663636%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
