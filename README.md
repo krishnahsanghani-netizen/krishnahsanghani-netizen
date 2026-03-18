@@ -29,21 +29,21 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 16 February 2026 - To: 17 March 2026
+From: 17 February 2026 - To: 18 March 2026
 
 ```txt
-C#                             #######------------------  29.28 %
-sh                             #####--------------------  21.70 %
-Markdown                       ####---------------------  17.13 %
-TypeScript                     ###----------------------  13.86 %
-XML                            ##-----------------------   8.68 %
+C#                             #######------------------  27.92 %
+sh                             ######-------------------  24.91 %
+Markdown                       #####--------------------  19.24 %
+TypeScript                     ###----------------------  10.75 %
+XML                            ##-----------------------   6.74 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 7.7 hours coding
+### This week I spent 8.9 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22002%22%2C%22Terminal%22%2C%22visualyze-mvp%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B18923.72375%2C4305.566142%2C4066.7492919999995%2C420.785391%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22Terminal%22%2C%22visualyze-mvp%22%2C%22002%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B25295.156831%2C4801.0393109999995%2C1782.6450439999999%2C155.716664%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
