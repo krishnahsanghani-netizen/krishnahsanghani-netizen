@@ -32,18 +32,18 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 From: 20 February 2026 - To: 21 March 2026
 
 ```txt
-Markdown                       ########-----------------  31.22 %
-C#                             ######-------------------  25.90 %
-sh                             ####---------------------  17.90 %
-TypeScript                     ##-----------------------   7.12 %
-XML                            #------------------------   5.51 %
+Markdown                       #######------------------  28.28 %
+C#                             ######-------------------  23.75 %
+sh                             ####---------------------  17.35 %
+XML                            ##-----------------------   7.87 %
+TypeScript                     ##-----------------------   6.45 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 11.4 hours coding
+### This week I spent 13.0 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22Terminal%22%2C%22visualyze-mvp%22%2C%22Unknown%20Project%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B35059.45076200001%2C4429.629451%2C1361.859653%2C22.055%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22Terminal%22%2C%22visualyze-mvp%22%2C%22Unknown%20Project%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B40886.99884100001%2C4533.761571%2C1361.859653%2C22.055%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
