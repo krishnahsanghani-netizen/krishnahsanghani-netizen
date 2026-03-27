@@ -29,7 +29,7 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 25 February 2026 - To: 26 March 2026
+From: 26 February 2026 - To: 27 March 2026
 
 ```txt
 Markdown                       ######-------------------  24.15 %
@@ -41,9 +41,9 @@ PowerShell                     ##-----------------------   7.44 %
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 8.7 hours coding
+### This week I spent 7.7 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22Terminal%22%2C%22Unknown%20Project%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B31100.226651%2C104.13212%2C15.384%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22Unknown%20Project%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B27611.086671%2C15.384%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
