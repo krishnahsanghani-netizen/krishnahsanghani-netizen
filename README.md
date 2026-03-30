@@ -29,21 +29,21 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 28 February 2026 - To: 29 March 2026
+From: 01 March 2026 - To: 30 March 2026
 
 ```txt
-Markdown                       ######-------------------  24.11 %
-C#                             #####--------------------  18.86 %
-sh                             ####---------------------  15.15 %
-TypeScript                     ##-----------------------   8.55 %
-XML                            ##-----------------------   7.28 %
+Markdown                       ######-------------------  24.05 %
+C#                             #####--------------------  18.81 %
+sh                             ####---------------------  15.12 %
+TypeScript                     ##-----------------------   8.53 %
+XML                            ##-----------------------   7.26 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 4.1 hours coding
+### This week I spent 4.0 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22larped-in%22%2C%22Terminal%22%2C%22LarpMaxxer%22%2C%22Unknown%20Project%22%2C%22Silly-Hacks-2026%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B6096.460209%2C3686.013273%2C2213.387135%2C1728.0%2C775.828778%2C112.131433%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22001%22%2C%22larped-in%22%2C%22Terminal%22%2C%22LarpMaxxer%22%2C%22Unknown%20Project%22%2C%22Silly-Hacks-2026%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B5502.678395999999%2C3686.013273%2C2213.387135%2C1728.0%2C775.828778%2C319.713864%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
