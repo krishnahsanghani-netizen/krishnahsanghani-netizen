@@ -29,7 +29,7 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 02 March 2026 - To: 31 March 2026
+From: 03 March 2026 - To: 01 April 2026
 
 ```txt
 Markdown                       ######-------------------  24.05 %
