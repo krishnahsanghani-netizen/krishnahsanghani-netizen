@@ -29,19 +29,19 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 09 March 2026 - To: 07 April 2026
+From: 21 March 2026 - To: 19 April 2026
 
 ```txt
-Markdown                       ######-------------------  25.19 %
-C#                             #####--------------------  18.70 %
-sh                             ####---------------------  14.30 %
-TypeScript                     ##-----------------------   8.14 %
-XML                            ##-----------------------   7.22 %
+Other                          ######-------------------  22.66 %
+Markdown                       ####---------------------  17.81 %
+Python                         ####---------------------  15.16 %
+sh                             ###----------------------  10.09 %
+YAML                           #------------------------   4.92 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 0.5 hours coding
+### This week I spent 0.0 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
