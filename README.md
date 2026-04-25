@@ -29,14 +29,14 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 26 March 2026 - To: 24 April 2026
+From: 27 March 2026 - To: 25 April 2026
 
 ```txt
-Other                          ########-----------------  32.94 %
-Python                         ######-------------------  22.03 %
-Markdown                       #####--------------------  20.96 %
-sh                             ###----------------------  12.30 %
-TypeScript                     ##-----------------------   6.74 %
+Other                          ########-----------------  33.00 %
+Python                         ######-------------------  22.08 %
+Markdown                       #####--------------------  21.00 %
+sh                             ###----------------------  12.33 %
+TypeScript                     ##-----------------------   6.75 %
 ```
 <!--END_SECTION:waka-->
 
