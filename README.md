@@ -29,14 +29,14 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 29 March 2026 - To: 27 April 2026
+From: 30 March 2026 - To: 28 April 2026
 
 ```txt
-Other                          #########----------------  37.96 %
-Python                         ######-------------------  25.39 %
-Markdown                       #####--------------------  20.28 %
-sh                             ###----------------------  10.87 %
-YAML                           -------------------------   1.73 %
+Other                          ##########---------------  38.56 %
+Python                         ######-------------------  25.60 %
+Markdown                       #####--------------------  20.45 %
+sh                             ##-----------------------   9.86 %
+YAML                           -------------------------   1.74 %
 ```
 <!--END_SECTION:waka-->
 
@@ -45,5 +45,5 @@ YAML                           -------------------------   1.73 %
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-No project data this week.
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22investment-terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B149.0%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
