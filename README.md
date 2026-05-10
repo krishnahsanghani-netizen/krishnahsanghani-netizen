@@ -29,21 +29,21 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 10 April 2026 - To: 09 May 2026
+From: 11 April 2026 - To: 10 May 2026
 
 ```txt
-Python                         ###########--------------  42.22 %
-Other                          #####--------------------  21.24 %
-JSON                           #####--------------------  18.69 %
-Markdown                       ###----------------------  10.60 %
-TypeScript                     #------------------------   2.92 %
+Python                         ############-------------  47.42 %
+JSON                           ######-------------------  25.20 %
+Markdown                       ###----------------------  10.76 %
+Other                          ##-----------------------   9.06 %
+TypeScript                     #------------------------   3.88 %
 ```
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 0.1 hours coding
+### This week I spent 0.0 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22lead-scraper%22%2C%22Unknown%20Project%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B370.191797%2C0.0%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Unknown%20Project%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B0.0%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
