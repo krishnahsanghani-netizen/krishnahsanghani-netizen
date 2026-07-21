@@ -29,7 +29,7 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 21 June 2026 - To: 20 July 2026
+From: 22 June 2026 - To: 21 July 2026
 
 ```txt
 No language data in selected range.
