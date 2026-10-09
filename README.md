@@ -1,6 +1,6 @@
 ## Hey there- I'm Krishna!
 
-I am a high schooler getting into the world of programming. I love building solutions and tools that serve people. Currently into spatial computing, C#, TypeScript, and rapid prototyping.
+I am a college freshman getting into the world of programming. I love building solutions and tools that serve people. Currently into spatial computing, C#, TypeScript, and rapid prototyping.
 
 I'm currently working on a portfolio of ventures where I spend most of my time designing immersive workflows. Some projects I've worked on include:
 - A VR-to-BIM edit pipeline for Revit and Quest VR --> Soon to be a full VR-based AEC tool for 3D roomscale design
