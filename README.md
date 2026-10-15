@@ -29,7 +29,7 @@ I'm currently working on a portfolio of ventures where I spend most of my time d
 ### This month I have been doing:
 
 <!--START_SECTION:waka-->
-From: 15 September 2026 - To: 14 October 2026
+From: 16 September 2026 - To: 15 October 2026
 
 ```txt
 Markdown                       ########-----------------  33.36 %
@@ -41,9 +41,9 @@ JavaScript                     ##-----------------------   7.26 %
 <!--END_SECTION:waka-->
 
 <!--START_SECTION:waka-week-->
-### This week I spent 0.3 hours coding
+### This week I spent 0.0 hours coding
 <!--END_SECTION:waka-week-->
 
 <!--START_SECTION:waka-project-pie-->
-<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Terminal%22%2C%22thr_iyuet9h9ud%22%2C%22BB%20Test%20Run%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B602.85849%2C385.540425%2C97.275757%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
+<img src="https://quickchart.io/chart?width=900&height=540&c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Terminal%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B0.0%5D%7D%5D%7D%2C%22options%22%3A%7B%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22bottom%22%7D%2C%22datalabels%22%3A%7B%22display%22%3Afalse%7D%7D%7D%7D" alt="Weekly project split pie chart" width="540" />
 <!--END_SECTION:waka-project-pie-->
